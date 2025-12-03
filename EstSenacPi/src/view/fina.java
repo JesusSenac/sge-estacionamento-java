@@ -191,6 +191,7 @@ public class fina {
         private final JMenuItem registerVehicleItem;
         private final JMenuItem exitItem;
         private final JMenuItem settingsItem; 
+        //private final JMenuItem settingsItemCadastro;
         private JTable activeTable;
         private JTable historyTable; 
         
@@ -237,15 +238,20 @@ public class fina {
             exitItem.setForeground(Color.WHITE);
             optionsMenu.add(exitItem);
             
+            
+            
             menuBar.add(optionsMenu);
             setJMenuBar(menuBar);
             
             // --- MENU SUPERIOR CADASTROS---
-            //JMenuBar menuCadastro = new JMenuBar();
+            
+            //JMenuBar menuBarCadastro = new JMenuBar();
+            //optionsMenu.setMnemonic('1');
+            //JMenu optionsMenuCadastros = new JMenu("⚙️ Cadastros");
+            //setJMenuBar(menuBarCadastro);
             
             
-            
-            
+            //-------------------------------------------------------;
             
 
             // --- CRIAÇÃO DAS TABELAS (Modelos) ---
@@ -362,7 +368,7 @@ public class fina {
         
         //---jesus---listarVeiculos()----------------------------------------------
 
-        private void listarVeiculos() {
+        public void listarVeiculos() {
         	
         	 try {
              	
@@ -842,9 +848,49 @@ public class fina {
 		                	
 		                	//MainTableScreen.addVehicleToTable(nome, modelo, placa, cor, telefone, vaga, andar, hora);
 		                	MainTableScreen.addVehicleToTable(id ,nome, modelo, placa, cor, telefone, vaga, andar, hora);
-			                
+		                	
+		                	//listarVeiculos();
+		                	 try {
+		                      	
+		                 		
+		                         List<VeiculoModel> lista = controleVeiculo.listarVeiculos();
+		                         
+		                        
+		                         activeTableModel.setRowCount(0);
+		                         
+		                         for (VeiculoModel t : lista) {
+		                         	activeTableModel.addRow(new Object[]{
+		                                     t.getIdVeiPk(),
+		                                     t.getVeiNome(),
+		                                     t.getVeiModelo(),
+		                                     t.getVeiPlaca(),
+		                                     t.getVeiCor(),
+		                                     t.getVeiTel(),
+		                                     t.getVeiVaga(),
+		                                     t.getVeiAndar(),
+		                                     t.getVeiHora(),
+		                                     t.getVeiDtEntrada()
+		                                     
+		                                     
+		                             });
+		                         	
+		                         	
+		                         	
+		                         }
+		                     } catch (Exception ex) {
+		                         JOptionPane.showMessageDialog(this, "Erro ao listar: " + ex.getMessage());
+		                         
+		                     }
+		                	
+		                	//----------------------------------------------
+		                	
 		                	JOptionPane.showMessageDialog(this, "Veículo Registrado com Sucesso!", "Registro Completo", JOptionPane.INFORMATION_MESSAGE);
-			                dispose();
+			                
+		                	//controleVeiculo.listarVeiculos();
+		                	
+		                	dispose();
+			                
+			                
 						
 		                }
 
