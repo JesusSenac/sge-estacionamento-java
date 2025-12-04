@@ -1,5 +1,9 @@
 # sge-estacionamento-java
 Sistema de gestão de estacionamento desenvolvido pelos alunos do curso de Programador de Sistemas do SENAC
+
+Propósito geral do sistema
+Gerenciar a entrada e saída dos veículos no Estacionamento do Senac e qualquer outro estacionamento que se encaixe na modelagem e negócio do sistema.
+
 -----
 Visão Geral
 Classe: jlogin
@@ -18,13 +22,5 @@ OBS:
 nesta versão de demostração usaremos o Usuário = admin  e a senha = 123
 -
 Componentes (UI)
-
-JPanel contentPane: container principal.
-JPanel panel: painel interno com fundo Color.LIGHT_GRAY.
-JLabel lblNewLabel: rótulo “Usuário”.
-JTextField textFieldUsuario: campo de texto para nome de usuário.
-JLabel lblNewLabel_1: rótulo “Senha”.
-JPasswordField passwordFieldSenha: campo de senha.
-JButton btnNewButton: botão “Entrar”.
-JLabel lblNewLabel_2: título “Estacionamento SENAC PI”.
+Utilizamos a Biblioteca Swing do java para a criação da interface gráfica. 
 -
