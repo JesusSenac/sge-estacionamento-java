@@ -1,6 +1,8 @@
 # sge-estacionamento-java
 Sistema de gestão de estacionamento desenvolvido pelos alunos do curso de Programador de Sistemas do SENAC
 
+Sistema de gestão de estacionamento desenvolvido pelos alunos do curso de Programador de Sistemas do SENAC
+
 Propósito geral do sistema
 Gerenciar a entrada e saída dos veículos no Estacionamento do Senac e qualquer outro estacionamento que se encaixe na modelagem e negócio do sistema.
 
@@ -22,5 +24,15 @@ OBS:
 nesta versão de demostração usaremos o Usuário = admin  e a senha = 123
 -
 Componentes (UI)
+
 Utilizamos a Biblioteca Swing do java para a criação da interface gráfica. 
 -
+
+# jlogin (Tela de Login - Swing)
+
+## Objetivo
+Tela de login para o sistema "Estacionamento SENAC PI". Valida credenciais estáticas e abre a tela principal.
+
+## Requisitos
+- Java 8+
+- Swing (javax.swing)
