@@ -1,11 +1,28 @@
 # sge-estacionamento-java
-Sistema de gestão de estacionamento desenvolvido pelos alunos do curso de Programador de Sistemas do SENAC
+Este é um projeto de sistema de gerenciamento de estacionamento desenvolvido em Java, utilizando a arquitetura Model-View-Controller (MVC) para separação de responsabilidades e a biblioteca Swing para a interface gráfica de usuário (GUI). O acesso e persistência de dados são realizados através de JDBC (Java Database Connectivity), seguindo o padrão Data Access Object (DAO).
+-----
+Tecnologias Utilizadas
+Componente        Tecnologia             Descrição
+Linguagem         Java (JDK 8+)          Linguagem principal do projeto.
+Frontend (View)   Java Swing             Biblioteca nativa para a construção da interface gráfica.
+Backend (Padrão)  MVC                    Arquitetura Model-View-Controller para organização do código.
+Acesso a Dados    JDBC                   Utilizado para conectar e interagir com o banco de dados.
+PersistênciaDAO   (Data Access Object)   Padrão para abstrair e isolar a camada de acesso a dados.
+Banco de Dados    MySQL 8 (Configurável) O projeto utiliza JDBC, sendo flexível para diferentes SGBDs.
+-----
 
-Sistema de gestão de estacionamento desenvolvido pelos alunos do curso de Programador de Sistemas do SENAC
+Funcionalidades Principais
+O sistema permite o gerenciamento completo das operações diárias de um estacionamento:
 
-Propósito geral do sistema
-Gerenciar a entrada e saída dos veículos no Estacionamento do Senac e qualquer outro estacionamento que se encaixe na modelagem e negócio do sistema.
+Cadastro de Veículos: Registrar entrada de novos veículos com placa, modelo e proprietário.
 
+Controle de Vagas: Visualização em tempo real das vagas ocupadas e disponíveis.
+
+Registro de Saída: Calcular o tempo de permanência e o valor a ser pago (com base em tarifas horárias).
+
+Gerenciamento de Clientes: Cadastro e consulta de clientes mensalista.
+
+Relatórios: Geração de relatórios básicos de faturamento e ocupação.
 -----
 Visão Geral
 Classe: jlogin
